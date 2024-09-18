@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Chewy", system-ui;
+}
+.hero-panner{
+    text-align: center;
+    height: 91vh;
+    align-content: center;
+    width: 100%;
+
+    background-image:  url("Film Frenzy.jpg");
+    background-size: cover;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+body{
+    background-color: black;
+    color: white;
+}
+h2{
+    font-size: 3.1rem;
+    margin-bottom: 1rem;
+    color: white;
+   
+}
+p{
+    color: white;
+}
+header{
+    padding-inline: 4.5rem;
+    height: 5rem;
+    align-content: center;
+    background-color: black;
+    color: white;
+}
+h2{
+    font-size: 2.1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.movie-card{
+    width: calc(100% / 5 - 6rem);
+    margin-top: 4rem;
+    
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.best , .section{
+    padding-inline: 4.5rem;
+   display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.watch{
+    width: 91vw;
+    height: 91vh;
+}
+iframe{
+   overflow-x: hidden;
+   overflow-y: hidden;
+   width: 90vw;
+}
+footer{
+    position: relative;
+    bottom: 0;
+
+    z-index: 99999999;
+    text-align: center;
+    align-items: end;
+    align-content: end;
+    height: 5rem;
+    margin-top: 10rem;
+}
+.fab{
+    
+    text-align: center;
+    display: flex;
+    font-size: x-large;
+    margin-bottom: .7rem;
+    margin-left: .25rem;
+   
+}
+
+@media (max-width: 778px) {
+    .section{
+        flex-direction: column;
+    }
+    img{
+        width: 100%;
+    }
+    .movie-card{
+        width: 100%;
+    }
+    .hero-panner{
+        display: none;
+    }
+  }
+  .movie-card:hover{
+    display: inline-block;
+    animation: rotate .3s linear  infinite alternate ;
+
+   
+  }
+  .movie-card:focus{
+    display: inline-block;
+    animation: rotate2 .3s linear  infinite alternate ;
+
+   
+  }
+  @keyframes rotate {
+    from{
+        z-index:999999999999999999999;
+ 
+        transform: rotate(-11deg)
+    }
+    to{
+        z-index:999999999999999999999;
+
+        transform: rotate(11deg)
+    }
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  label{
+    font-size: x-large;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  .logo{
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    
+  }
+  .logo-container{
+    display: flex;
+    align-content: center;
+    align-items: center;
+  }
+  .loading{
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    background-color: black;
+    transition: all .1s;
+  }
+  .loading-bar{
+    width: 0px;
+    background-color: rgb(103, 139, 255);
+    height: 3rem;
+    border-radius: 20px;
+    align-self: center;
+    margin: auto;
+    animation: load 5015ms;
+
+  }
+  @keyframes load{
+    form{
+        width: 0px;
+    }
+    to{
+        width: 50%;
+  
+    }
+    
+  }
